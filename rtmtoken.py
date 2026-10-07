@@ -18,13 +18,7 @@ service_keys_list = ["<xxxx-xxx-xxxx-xxxx-xxxxxxx>"]
 tokenurl = "https://<VCFOPSFQDN>/suite-api/api/auth/token/acquire"
 ops_user = "admin"
 ops_user_pw = "MyPassword"
-token_headers = {
-    "Content-Type": "application/json"
-}
-token_payload = {
-    "username": f"{ops_user}",
-    "password": f"{ops_user_pw}"
-}
+
 # Define RTM FQDN. Find this under VCF Ops: Build->Lifecycle->VCF Management->Components. Look up the FQDN/IP for Real-time metrics.
 rtm_url = "rtm_fqdn"
 
@@ -46,6 +40,15 @@ grafana_url = f"http://<GRAFANAFQDN>:3000/api/datasources/uid/{grafana_uid}"
 grafana_user = "admin"
 grafana_password = "Password"
 
+#### No need to modify any of the lines below
+
+token_headers = {
+    "Content-Type": "application/json"
+}
+token_payload = {
+    "username": f"{ops_user}",
+    "password": f"{ops_user_pw}"
+}
 
 
 payload = {
